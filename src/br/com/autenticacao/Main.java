@@ -10,9 +10,9 @@ public class Main {
 		UsuarioController controller = new UsuarioController();
 		
 		Usuario usuario = new Usuario();
-		usuario.setNome("Anthony");
-		usuario.setEmail("anthony@rhcp.com");
-		usuario.setSenha("Ant123");
+		usuario.setNome("Janaina");
+		usuario.setEmail("janay@rhcp.com");
+		usuario.setSenha("jan123");
 		usuario.setIsAtivo(true);
 		
 		controller.cadastrar(usuario);

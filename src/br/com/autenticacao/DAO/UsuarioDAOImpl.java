@@ -93,7 +93,8 @@ public class UsuarioDAOImpl implements GenericDAO {
 	public Boolean cadastrar(Object object) {
 		Usuario usuario = (Usuario) object;
 		PreparedStatement stmt = null;
-		String sql = "INSERT INTO usuario (nome, email, senha, isAtivo) VALUES (?,?,?,?)";
+		String sql = "INSERT INTO usuario (nome, email, senha, isAtivo) "
+				+ "VALUES (?,?,MD5(?),?)";
 		try {
 			stmt = conn.prepareStatement(sql);
 			stmt.setString(1, usuario.getNome());
